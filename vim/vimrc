@@ -1,0 +1,46 @@
+""""""""""
+" THEMES "
+""""""""""
+set t_Co=256  " make use of 256 terminal colors
+set background=dark
+
+"""""""""""""
+" INTERFACE "
+"""""""""""""
+set wildmenu
+
+""""""""""
+" EDITOR "
+""""""""""
+set autoindent
+
+" line numbers
+set nu
+
+" syntax highlighting
+syntax on
+
+" smartcase
+set ignorecase
+set smartcase
+
+" incremental highlight
+set incsearch
+
+" tabs=spaces
+set tabstop=4
+set softtabstop=0
+set shiftwidth=4
+set smarttab
+
+" fold by indent
+set fdm=indent
+set nofoldenable
+
+"""""""""""""""""""""
+" LANGUAGE-SPECIFIC "
+"""""""""""""""""""""
+" python: spaces settings
+au BufRead,BufNewFile *.py,*pyw set shiftwidth=4
+au BufRead,BufNewFile *.py,*.pyw set expandtab
+au BufNewFile *.py,*.pyw set fileformat=unix
