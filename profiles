@@ -1,4 +1,5 @@
 [darwin]
+homebrew
 git
 tmux
 vim
