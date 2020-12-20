@@ -2,5 +2,4 @@
 
 [run]
 # Installing packages
-brew install fish \
-    --cask iterm2
+brew install fish
