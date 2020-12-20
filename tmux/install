@@ -2,5 +2,5 @@
 
 [symlink]
 ./tmux.conf: ~/.tmux.conf
-./tmux.conf.osx: ~/.tmux.conf.osx
-./tmux.conf.linux: ~/.tmux.conf.linux
+./tmux.osx.conf: ~/.tmux.osx.conf
+./tmux.linux.conf: ~/.tmux.linux.conf
