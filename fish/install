@@ -1,2 +1,8 @@
+#!/usr/bin/env -S perl ${HOME}/.dotfiles/install --file
+
 [symlink]
-./config.fish: ~/.config/fish/config.fish
+.: ~/.config/fish
+
+[run]
+# Disabling fish motd
+fish -c 'set -U fish_greeting'
