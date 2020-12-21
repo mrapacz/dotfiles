@@ -482,16 +482,6 @@ colors:
 # If the same trigger is assigned to multiple actions, all of them are executed
 # in the order they were defined in.
 key_bindings:
-  - { key: Key0, mods: Alt, chars: "\x1b0" }
-  - { key: Key1, mods: Alt, chars: "\x1b1" }
-  - { key: Key2, mods: Alt, chars: "\x1b2" }
-  - { key: Key3, mods: Alt, chars: "\x1b3" }
-  - { key: Key4, mods: Alt, chars: "\x1b4" }
-  - { key: Key5, mods: Alt, chars: "\x1b5" }
-  - { key: Key6, mods: Alt, chars: "\x1b6" }
-  - { key: Key7, mods: Alt, chars: "\x1b7" }
-  - { key: Key8, mods: Alt, chars: "\x1b8" }
-  - { key: Key9, mods: Alt, chars: "\x1b9" }
   #- { key: Paste,                                action: Paste          }
   #- { key: Copy,                                 action: Copy           }
   #- { key: L,         mods: Control,             action: ClearLogNotice }
@@ -519,7 +509,26 @@ key_bindings:
   - { key: F,              mods: Command|Control,    action: ToggleFullscreen }
   - { key: F,              mods: Command,            action: SearchForward    }
   - { key: B,              mods: Command,            action: SearchBackward   }
-
+  
+  # Make option key work as meta
+  - { key: Key0, mods: Alt, chars: "\x1b0" }
+  - { key: Key1, mods: Alt, chars: "\x1b1" }
+  - { key: Key2, mods: Alt, chars: "\x1b2" }
+  - { key: Key3, mods: Alt, chars: "\x1b3" }
+  - { key: Key4, mods: Alt, chars: "\x1b4" }
+  - { key: Key5, mods: Alt, chars: "\x1b5" }
+  - { key: Key6, mods: Alt, chars: "\x1b6" }
+  - { key: Key7, mods: Alt, chars: "\x1b7" }
+  - { key: Key8, mods: Alt, chars: "\x1b8" }
+  - { key: Key9, mods: Alt, chars: "\x1b9" }
+  - { key: J,        mods: Alt,     chars: "\x1bj"                       }
+  - { key: K,        mods: Alt,     chars: "\x1bk"                       }
+  - { key: I,        mods: Alt,     chars: "\x1bi"                       }
+  - { key: L,        mods: Alt,     chars: "\x1bl"                       }
+  - { key: Up,       mods: Alt,     chars: "\x1b[1;5A"                   }
+  - { key: Down,     mods: Alt,     chars: "\x1b[1;5B"                   }
+  - { key: Left,     mods: Alt,     chars: "\x1bb"                       }
+  - { key: Right,    mods: Alt,     chars: "\x1bf"                       }
 #debug:
   # Display the time it takes to redraw each frame.
   #render_timer: false
