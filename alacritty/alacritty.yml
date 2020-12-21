@@ -62,6 +62,12 @@ window:
   # Scrolling distance multiplier.
   #multiplier: 3
 
+shell:
+  program: /usr/local/bin/fish
+  args:
+    - --login
+    - --init-command
+    - tmux new -s mrapacz || tmux attach -t mrapacz
 # Font configuration
 font:
   normal:
