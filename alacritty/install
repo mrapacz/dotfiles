@@ -1,0 +1,2 @@
+[symlink]
+./alacritty.yml: ~/.alacritty.yml
