@@ -1,5 +1,9 @@
 #!/usr/bin/env -S perl ${HOME}/.dotfiles/install --file
 
 [run]
-# Installing packages
+# Installing powerline fonts
+git clone https://github.com/powerline/fonts.git --depth=1
+cd fonts && ./install.sh && cd .. && rm -rf fonts
+
+# Installing fish
 brew install fish
