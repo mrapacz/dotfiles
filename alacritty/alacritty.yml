@@ -3,7 +3,10 @@
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
 # set by alacritty itself.
-# env:
+env:
+  # We need this together with set -ga terminal-overrides config in tmux.conf to make less scroll 
+  # without entering copy mode
+  LESS: "-R"
   # TERM variable
   #
   # This value is used to set the `$TERM` environment variable for
@@ -547,6 +550,7 @@ key_bindings:
   - { key: Down,        mods: Alt|Shift,       chars: "\x1B\x1B[B"      }
   - { key: Up,          mods: Alt,             chars: "\x1B\x1B[A"      }
   - { key: Up,          mods: Alt|Shift,       chars: "\x1B\x1B[A"      }
+
   # - { key: A,           mods: Alt,             chars: "\x1Ba"           }
   # - { key: A,           mods: Alt|Shift,       chars: "\x1BA"           }
   # - { key: B,           mods: Alt,             chars: "\x1Bb"           }
