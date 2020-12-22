@@ -4,3 +4,4 @@
 ./tmux.conf: ~/.tmux.conf
 ./tmux.osx.conf: ~/.tmux.osx.conf
 ./tmux.linux.conf: ~/.tmux.linux.conf
+./extra: ~/.tmux
