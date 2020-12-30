@@ -8,3 +8,9 @@ alias g "clear; git status"
 alias gd "git diff"
 
 abbr -a mvl move-last-download
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+eval /Users/mrapacz/opt/anaconda3/bin/conda "shell.fish" "hook" $argv | source
+# <<< conda initialize <<<
+
