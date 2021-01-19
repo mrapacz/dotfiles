@@ -11,7 +11,7 @@ alias gd "git diff"
 abbr -a mvl move-last-download
 
 # >>> conda initialize >>>
-set conda_path ~/opt/anaconda3/conda
+set conda_path ~/opt/anaconda3/bin/conda
 if test -e $conda_path
     eval $conda_path "shell.fish" "hook" $argv | source
 end
