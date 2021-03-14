@@ -171,7 +171,7 @@ sub parse_profiles_file {
 	$profile_configs = $profiles{$profile};
 	if (!defined $profile_configs) {
 	    $profile_configs = [];
-	    @profiles{$profile} = $profile_configs;
+	    $profiles{$profile} = $profile_configs;
 	}
 	push(@$profile_configs, $config);
     };
