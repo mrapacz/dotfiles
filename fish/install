@@ -8,5 +8,8 @@
 fish -c 'set -U fish_greeting'
 # Fetching fisher
 fish -c 'curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher'
+
 # Installing 'done'
 fish -c 'fisher install franciscolourenco/done'
+# Installing os-specific dependencies of done
+fish -c 'if test (uname -s) = "Darwin"; brew install terminal-notifier; end'
