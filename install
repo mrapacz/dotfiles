@@ -426,20 +426,35 @@ sub run_commands {
 
 sub mk_symlink {
     my $link = shift;
+    my $source = $link->src;
+    my $target = $link->target;
+
     print
         GREEN, "Linking ",
-        MAGENTA, $link->src,
+        MAGENTA, $source,
         GREEN, " to ",
-        BLUE, $link->target,
+        BLUE, $target,
         RESET, "\n";
 
-    unless (-e $link->src) {
-        die RED "File ", UNDERSCORE $link->src, CLEAR RED " does not exist", RESET, "\n";
+    unless (-e $source) {
+        die RED "File ", UNDERSCORE $source, CLEAR RED " does not exist", RESET, "\n";
     }
 
-    my $target_dir = containing_dir($link->target);
+    my $target_dir = containing_dir($target);
     make_path($target_dir);
-    symlink($link->src, $link->target);
+    
+    if (-d $target) {
+        print 
+            GREEN, "Already exists: ",
+            BLUE, $target,
+            GREEN, ". Backing up to ",
+            MAGENTA, "${target}.orig",
+            RESET, "\n";
+
+        my $backup_dir = "$target.orig";
+        system("rm -rf $backup_dir && cp -r $target $backup_dir && rm -rf $target")
+    }
+    system("ln -Ffs $source $target")
 }
 
 sub print_comment {
