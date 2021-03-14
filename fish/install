@@ -13,3 +13,6 @@ fish -c 'curl -sL https://git.io/fisher | source && fisher install jorgebucaran/
 fish -c 'fisher install franciscolourenco/done'
 # Installing os-specific dependencies of done
 fish -c 'if test (uname -s) = "Darwin"; brew install terminal-notifier; end'
+
+# Priming done.fish
+fish -c 'source ~/.config/fish/conf.d/done.fish;'
