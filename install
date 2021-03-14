@@ -454,7 +454,7 @@ sub mk_symlink {
         my $backup_dir = "$target.orig";
         system("rm -rf $backup_dir && cp -r $target $backup_dir && rm -rf $target")
     }
-    system("ln -Ffs $source $target")
+    symlink($source, $target);
 }
 
 sub print_comment {
