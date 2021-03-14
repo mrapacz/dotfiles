@@ -6,3 +6,7 @@
 [run]
 # Disabling fish motd
 fish -c 'set -U fish_greeting'
+# Fetching fisher
+fish -c 'curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher'
+# Installing 'done'
+fish -c 'fisher install franciscolourenco/done'
