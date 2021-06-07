@@ -4,8 +4,6 @@
 .: ~/.config/fish
 
 [run]
-# Disabling fish motd
-fish -c 'set -U fish_greeting'
 # Fetching fisher
 fish -c 'curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher'
 
@@ -16,3 +14,6 @@ fish -c 'if test (uname -s) = "Darwin"; brew install terminal-notifier; end'
 
 # Priming done.fish
 fish -c 'source ~/.config/fish/conf.d/done.fish;'
+
+# Disabling fish motd
+fish -c 'set -U fish_greeting'
